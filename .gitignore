@@ -21,6 +21,7 @@
 .ionide
 
 *.exe
+*.vscode
 
 # Support for Project snippet scope
 
