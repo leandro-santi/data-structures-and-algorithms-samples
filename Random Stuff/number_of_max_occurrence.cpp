@@ -8,11 +8,11 @@ void fillArray(int *v, int n){
     }
 }
 
-int countMaxNumberOcurrences(int *v, int n){
+int countMaxNumberOccurrences(int *v, int size, int *number){
     int count = 0;
-    int max_number = -1000;
+    int max_number = -INT64_MAX;
 
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < size; i++){
         if(v[i] == max_number){
             count++;
         }
@@ -24,16 +24,21 @@ int countMaxNumberOcurrences(int *v, int n){
 
     }
 
+    *number = max_number;
+
     return count;
 
 }
 
 int main(){
-    int v[20];
+    int v[20], number, result;
 
     fillArray(v, 20);
 
-    cout << "The number of ocurrences of the max value is: " << countMaxNumberOcurrences(v, 20) << endl;
+    result = countMaxNumberOccurrences(v, 20, &number);
+
+    cout << "The input max value was: " << number << endl;
+    cout << "The number of occurrences of the max value is: " << result << endl;
 
     return 0;
 }
