@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
 
+// Counting occurrence number of the max number
+
 using namespace std;
 
 void fillArray(int *v, int n){
