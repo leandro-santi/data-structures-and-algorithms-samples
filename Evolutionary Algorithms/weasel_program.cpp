@@ -5,7 +5,7 @@ using namespace std;
 string stuff = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
 string target = "METHINKS IT IS LIKE A WEASEL";
 
-void startString(string *s){
+void generateRandomString(string *s){
 
     for(int i = 0; i < 28; i++){
 
@@ -18,7 +18,7 @@ int compareStrings(string s){
 
     int score = 0;
 
-    for(int i = 0; i < 28; i++){
+    for(int i = 0; i < 29; i++){
 
         if(s[i] == target[i]) score++;
 
@@ -28,53 +28,50 @@ int compareStrings(string s){
 
 }
 
-void makeCopies(string *s){
+void mutation(string *s, int *score){
     string copy, saveCopy;
-    int count, score, mutation;
+    int count, mutation;
 
-    copy = *s;
+    saveCopy = copy = *s;
 
     for(int i = 0; i < 100; i++){
         
         for(int j = 0; j < 29; j++){
 
-            if(copy[j] != target[j]){
-                
-                mutation = rand() % 100;
-                if(mutation <= 5){
-                    copy[j] = stuff[rand() % 29];
-                }
+            mutation = rand() % 100;
 
+            if(mutation <= 5){
+                copy[j] = stuff[rand() % 29];
             }
 
         }
 
-        // Saving the best copy
-        /*count = compareStrings(copy);
-        if(count > score){
+        count = compareStrings(copy);
+        if(count > *score){
             saveCopy = copy;
-            score = count;
-        }*/
+            *score = count;
+        }
 
-        *s = copy;
-        cout << copy << endl;
+        *s = saveCopy;
 
     }
+
 }
 
 int main(){
 
     string s = "";
-    int generation = 1;
+    int generation = 1, score = 0;
     
-    startString(&s);
+    generateRandomString(&s);
 
-    // cout << s << " " << s.length() << endl;
+    srand(time(0));
 
     while(s != target){
-        cout << "Generation: " << generation << endl;
-        makeCopies(&s);
+        mutation(&s, &score);
         generation++;
+        cout << "Generation: " << generation << endl;
+        cout << "Frase: " << s << endl;
     }
 
     return 0;
