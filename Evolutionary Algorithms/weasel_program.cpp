@@ -5,6 +5,7 @@ using namespace std;
 string stuff = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
 string target = "METHINKS IT IS LIKE A WEASEL";
 
+// Reprodution
 void generateRandomString(string *s){
 
     for(int i = 0; i < 28; i++){
@@ -14,6 +15,14 @@ void generateRandomString(string *s){
     }
 }
 
+// Recombination
+char returnRandomCharacter(){
+
+    return stuff[rand() % 29];
+
+}
+
+// Selection
 int compareStrings(string s){
 
     int score = 0;
@@ -28,6 +37,7 @@ int compareStrings(string s){
 
 }
 
+// Mutation
 void mutation(string *s, int *score){
     string copy, saveCopy;
     int count, mutation;
@@ -38,15 +48,16 @@ void mutation(string *s, int *score){
         
         for(int j = 0; j < 29; j++){
 
-            mutation = rand() % 100;
+            mutation = 1 + rand() % 100;
 
             if(mutation <= 5){
-                copy[j] = stuff[rand() % 29];
+                copy[j] = returnRandomCharacter();
             }
 
         }
 
         count = compareStrings(copy);
+
         if(count > *score){
             saveCopy = copy;
             *score = count;
@@ -60,18 +71,19 @@ void mutation(string *s, int *score){
 
 int main(){
 
-    string s = "";
-    int generation = 1, score = 0;
+    string phrase = "";
+    int generation = 0, score = 0;
     
-    generateRandomString(&s);
+    generateRandomString(&phrase);
 
     srand(time(0));
 
-    while(s != target){
-        mutation(&s, &score);
+    while(phrase != target){
+        mutation(&phrase, &score);
         generation++;
-        cout << "Generation: " << generation << endl;
-        cout << "Frase: " << s << endl;
+        cout << "Generation: " << generation << " ";
+        cout << "Phrase: " << phrase <<  " ";
+        cout << "Score: " << score << endl;
     }
 
     return 0;
