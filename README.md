@@ -4,7 +4,7 @@
 
 ### Notes
 
-* A maneira como os dados são organizados dentro do computador é garante a manipulação eficiente deles.
+* A maneira como os dados são organizados dentro do computador garante a manipulação eficiente deles.
 
 * **Estrutura de Dados** é a forma como decidimos armazenar e organizar os dados dentro do computador, assim atendendo requisitos de processamento.
 
