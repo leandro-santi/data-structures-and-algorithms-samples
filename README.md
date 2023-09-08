@@ -1,6 +1,9 @@
 # data-structures-and-algorithms-samples
 
 * code samples and basic explanations
+* This repository aims to help brazilian computer science students to get samples of data structure codes and algorithms.
+
+* **As explicações em cada tópico abordado irão estar em pt-br.**
 
 ## Notes
 
