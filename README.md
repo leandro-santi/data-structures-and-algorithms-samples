@@ -19,7 +19,9 @@
 
 ### Algoritmos 
 
-* **Algoritmo** é uma sequência simples e objetiva de instruções para solucionar um determinado problema. Cara instrução é uma informação que indica ao computador uma ação básica a ser executada.
+* **Algoritmo** é uma sequência simples e objetiva de instruções para solucionar um determinado problema. 
+
+* Cara instrução é uma informação que indica ao computador uma ação básica a ser executada.
 
 * A sequência de instruções que define um algoritmo deve ser sempre finita (começo - meio - fim) e não pode ser ambígua (não deve permitir mais de uma interpretação de seu significado).
 
@@ -94,7 +96,7 @@ int main(){
 
 * As variáveis armazenadas na **_heap_** não dependem do escopo e devem ser liberadas manualmente pelo programador.
 
-* Se o programador esquecer de liberar a memória, um vazamento de memória (_memory leak_) pode ocorrer, significando que partes da memória que foram alocadas dinamicamente continuam ocupando espaço na memória do sistema e ,assim, causando falhas.
+* Se o programador esquecer de liberar a memória, um vazamento de memória (_memory leak_) pode ocorrer, significando que partes da memória que foram alocadas dinamicamente continuam ocupando espaço na memória do sistema, logo causando falhas.
 
 * Nesse tipo de alocação os dados não necessitam estar organizados sequencialmente na memória.
 
