@@ -50,6 +50,8 @@
 
 * Nesse tipo de alocação os dados são organizados sequencialmente na memória do computador (como os **_arrays_**).
 
+* Toda vez que se passa variáveis de tipos primitivos como argumento de uma função ela é duplicada na memória **(Passagem por valor)**.
+
 * A quantidade total de memória utilizada pelo programa é previamente conhecida e não pode ser mudada (não é possível redimensionar a memória).
 
 * As variáveis são alocadas considerando toda a memória que seu tipo necessita e não consideram a quantidade que seria realmente necessária na execução do programa. Assim podemos ter espaços alocados na memória sem utilização.
