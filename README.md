@@ -147,3 +147,15 @@ Pode ocorrer _stack overflow_ quando for muito usada. | A alocação pode falhar
 É usada quando se sabe exatamente o quanto de espaço será alocado antes do tempo de compilação e esse espaço não é muito grande. | É usada quando não se sabe exatamente o quanto de espaço será alocado antes do tempo de compilação ou esse espaço é muito grande.
 Geralmente possui um tamanho máximo predeterminado quando o programa inicia. | Responsável por vazamentos de memória.
 
+
+### Análise da Complexidade de Algoritmos
+
+* Podemos fazer algoritmos mais eficientes? É a ***Análise de Algoritmos*** que responde essa questão.
+
+* Algoritmos diferentes que resolvem um mesmo problema não necessariamente o fazem com a mesma eficiência.
+
+* Essas diferenças de eficiência podem ser:
+    1. Irrelevantes para um pequeno número de elementos processados.
+    2. Crescer proporcionalmente com o número de elementos processados.
+
+* 
