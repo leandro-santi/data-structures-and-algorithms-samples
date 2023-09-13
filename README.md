@@ -158,4 +158,29 @@ Geralmente possui um tamanho máximo predeterminado quando o programa inicia. | 
     1. Irrelevantes para um pequeno número de elementos processados.
     2. Crescer proporcionalmente com o número de elementos processados.
 
+* **A complexidade computacional** é usada para medir e comparar a eficiência dos algoritmos. Ela indica o custo ao se aplicar um determinado algoritmo.
+    * **custo = memória + tempo.**
+    * A **memória** indica quanto de espaço o algoritmo vai consumir e o **tempo**, a duração de execução.
+
+* Para analisar se um determinado algoritmo é eficiente, pode ser utilizar de uma **análise empírica** ou **análise matemática**.
+
+#### Análise Empírica
+
+* Na análise empírica, um algoritmo é analisado pela execução de seu programa correspondente.
+
+* Logo, é a avaliação da execução do mesmo quando implementado.
+
+* Vantagens:
+    * Avaliar o desempenho de uma determinada configuração de computador / linguagem.
+    * Considerar custos não aparentes (Por exemplo, a memória alocada).
+    * Comparar computadores.
+    * Comparar linguagens.
+
+* Desvantagens:
+    * Necessidade de ter o algoritmo pronto e funcionando.
+    * Resultado pode ser mascarado pelo hardware ou software utilizados.
+    * Qual a natureza dos dados? Dados reais, aleatórios ou perversos (piores casos)?
+
+##### Análise Matemática
+
 * 
