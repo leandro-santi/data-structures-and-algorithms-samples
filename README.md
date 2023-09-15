@@ -170,6 +170,8 @@ Geralmente possui um tamanho máximo predeterminado quando o programa inicia. | 
 
 * Logo, é a avaliação da execução do mesmo quando implementado.
 
+* Isso envolve medir o tempo de execução e, em alguns casos, o uso de recursos, como memória, à medida que o algoritmo é executado com entradas de teste reais ou geradas aleatoriamente.
+
 * Vantagens:
     * Avaliar o desempenho de uma determinada configuração de computador / linguagem.
     * Considerar custos não aparentes (Por exemplo, a memória alocada).
@@ -182,5 +184,34 @@ Geralmente possui um tamanho máximo predeterminado quando o programa inicia. | 
     * Qual a natureza dos dados? Dados reais, aleatórios ou perversos (piores casos)?
 
 ##### Análise Matemática
+
+* A medição do tempo gasto por um algoritmo pode ser feita de maneira independente do hardware ou da linguagem usada na sua implementação.
+
+* A **análise matemática** permite um estudo formal de um algoritmo ao nível de **ideia**.
+
+* Faz uso de um computador idealizado (independente do __hardware__, tempo constante).
+
+* É uma abordagem formal e teórica que busca entender o desempenho e o comportamento de algoritmos por meio de técnicas matemáticas.
+
+* Ela é frequentemente usada para avaliar o tempo de execução e o uso de recursos, como memória, em função do **tamanho da entrada do algoritmo**
+
+* Considera somente os custos dominantes do algoritmo. É o componente de um algoritmo que mais contribui para a sua complexidade temporal (tempo de execução) ou espacial (uso de memória) à medida que o tamanho da entrada aumenta.
+
+~~~C
+int SumArray(int arr[], int size) {
+    int sum = 0;
+    // Custo dominante é o loop for que itera por todos os elementos de um array e realiza alguma operação neles.
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+~~~
+
+* Identificar o custo dominante é importante na análise de algoritmos, pois ajuda a compreender qual parte do algoritmo tem o maior impacto no desempenho à medida que a entrada cresce.
+
+* Detalhes de baixo nível, como a linguagem de programação utilizada, o __hardware__ no qual o algoritmo é executado, ou o conjunto de instruções da CPU, são ignorados.
+
+* Esse tipo de análise permite entender como um algoritmo se comporta à medida que o conjunto de dados de entrada cresce. Podendo assim expressar a relação entre o conjunto de dados de entrada e a quantidade de tempo necessária para processar esses dados.
 
 * 
