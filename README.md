@@ -5,7 +5,7 @@
 
 * **As explicações em cada tópico abordado irão estar em pt-br.**
 
-## Notes
+## Conceitos Importantes
 
 ### Estrutura de Dados
 
