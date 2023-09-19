@@ -24,7 +24,7 @@
 
 * **Algoritmo** é uma sequência simples e objetiva de instruções para solucionar um determinado problema. 
 
-* Cara instrução é uma informação que indica ao computador uma ação básica a ser executada.
+* Cada instrução é uma informação que indica ao computador uma ação básica a ser executada.
 
 * A sequência de instruções que define um algoritmo deve ser sempre finita (começo - meio - fim) e não pode ser ambígua (não deve permitir mais de uma interpretação de seu significado).
 
@@ -51,7 +51,7 @@
 
 * A **_stack_** guarda os dados alocados dentro dos escopos de funções: variáveis locais, parâmetros, retorno de funções e endereços de outras áreas de código. Nela, as intruções e os dados vão sendo empilhados, e o desempilhamento ocorre automaticamente após a execução.
 
-* Nesse tipo de alocação os dados são organizados sequencialmente na memória do computador (como os **_arrays_**).
+* Nesse tipo de alocação, os dados são organizados sequencialmente na memória do computador (como os **_arrays_**).
 
 * Toda vez que se passa variáveis de tipos primitivos como argumento de uma função ela é duplicada na memória **(Passagem por valor)**.
 
