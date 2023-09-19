@@ -189,7 +189,7 @@ Geralmente possui um tamanho máximo predeterminado quando o programa inicia. | 
 
 * A **análise matemática** permite um estudo formal de um algoritmo ao nível de **ideia**.
 
-* Faz uso de um computador idealizado (independente do __hardware__, tempo constante).
+* Faz uso de um computador idealizado (independente do **_hardware_**, tempo constante).
 
 * É uma abordagem formal e teórica que busca entender o desempenho e o comportamento de algoritmos por meio de técnicas matemáticas.
 
@@ -210,7 +210,7 @@ int SumArray(int arr[], int size) {
 
 * Identificar o custo dominante é importante na análise de algoritmos, pois ajuda a compreender qual parte do algoritmo tem o maior impacto no desempenho à medida que a entrada cresce.
 
-* Detalhes de baixo nível, como a linguagem de programação utilizada, o __hardware__ no qual o algoritmo é executado, ou o conjunto de instruções da CPU, são ignorados.
+* Detalhes de baixo nível, como a linguagem de programação utilizada, o __*hardware*__ no qual o algoritmo é executado, ou o conjunto de instruções da CPU, são ignorados.
 
 * Esse tipo de análise permite entender como um algoritmo se comporta à medida que o conjunto de dados de entrada cresce. Podendo assim expressar a relação entre o conjunto de dados de entrada e a quantidade de tempo necessária para processar esses dados.
 
@@ -221,7 +221,7 @@ int SumArray(int arr[], int size) {
 ~~~C
 int greater = arr[0], i; // Custo = 1 Instrução
 
-for(i = 0; i < n; i++){ // Custo = 2n
+for(i = 0; i < n; i++){ // Custo = 3 + 2n
     if(arr[i] >= greater){
         greater = arr[i];
     }
@@ -237,18 +237,18 @@ for(i = 0; i < n; i++){ // Custo = 2n
 
 * Por serem instruções simples, elas possuem todas o mesmo custo (1).
 
-* No algoritmo, o comando de laço __for__ é utilizado para percorrer o __array__. Porém, antes mesmo de percorrer o __array__, ele precisa ser inicializado ao custo de uma instrução (i = 0). Além disso, mesmo que o __array__ tenha tamanho zero, ao menos uma comparação será executada (i < n), o que custa mais uma instrução **(2 instruções no total)**.
+* No algoritmo, o comando de laço __*for*__ é utilizado para percorrer o __*array*__. Porém, antes mesmo de percorrer o __*array*__, ele precisa ser inicializado ao custo de uma instrução (i = 0). Além disso, mesmo que o __*array*__ tenha tamanho zero, ao menos uma comparação será executada (i < n), o que custa mais uma instrução **(2 instruções no total)**.
 
-* Portanto, temos um total de duas instruções na inicialização do laço __for__. 
+* Portanto, temos um total de duas instruções na inicialização do laço __*for*__. 
 
-* Perceba que essas instruções serão executadas antes da primeira iteração do laço __for__.
+* Perceba que essas instruções serão executadas antes da primeira iteração do laço __*for*__.
 
-* O custo para executar o comando de laço __for__ é de: 2n instruções.
+* O custo para executar o comando de laço __*for*__ é de: 2n instruções.
 
-* Ao fim de cada iteração do laço __for__, precisamos executar mais duas instruções: uma de incremento (i++) e uma comparação para verificar se vamos continuar no laço __for__ (i < n). No nosso algoritmo, o comando de laço __for__ será executado n vezes, que é o número de elementos no __array__. Assim, essas duas instruções também serão executadas n vezes, ou seja, o seu custo será __2n instruções__.
+* Ao fim de cada iteração do laço __*for*__, precisamos executar mais duas instruções: uma de incremento (i++) e uma comparação para verificar se vamos continuar no laço __*for*__ (i < n). No nosso algoritmo, o comando de laço __*for*__ será executado n vezes, que é o número de elementos no __*array*__. Assim, essas duas instruções também serão executadas n vezes, ou seja, o seu custo será __2n instruções__.
 
-* Se ignorarmos o que está dentro do corpo do laço __for__, veremos que o algoritmo necessita executar __3 + 2n instruções__.
-    1. 3 instruções antes de iniciar o laço __for__;
-    2. 2 instruções ao fim de cada laço __for__, o qual é executado n vezes;
+* Se ignorarmos o que está dentro do corpo do laço __*for*__, veremos que o algoritmo necessita executar __3 + 2n instruções__.
+    1. **3 instruções** antes de iniciar o laço __*for*__;
+    2. **2 instruções** ao fim de cada laço __*for*__, o qual é executado **n vezes**;
 
-* Assim, considerando um laço vazio, podemos definir uma função matemática que representa o custo do algoritmo em relação ao tamanho do __array__ de entrada: **_f(n) = 2n + 3_**.
+* Assim, considerando um laço vazio, podemos definir uma função matemática que representa o custo do algoritmo em relação ao tamanho do __*array*__ de entrada: **_f(n) = 2n + 3_**.
