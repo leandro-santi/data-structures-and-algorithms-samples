@@ -11,4 +11,6 @@ int main(){
     int r = exp(0, 0);
 
     cout << r << endl;
+
+    return 1;
 }

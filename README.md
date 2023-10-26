@@ -1,9 +1,11 @@
 # data-structures-and-algorithms-samples
 
 * code samples and basic explanations
-* This repository aims to help brazilian computer science students to get samples of data structure codes and algorithms.
 
-* **As explicações em cada tópico abordado irão estar em pt-br.**
+* This repository aims to help brazilian computer science students to get code samples of data structure and algorithms.
+
+* **As explicações em cada tópico abordado irão estar inicialmente em pt-br.**
+
 
 ## Conceitos Importantes
 
@@ -22,7 +24,7 @@
 
 ### Algoritmos 
 
-* **Algoritmo** é uma sequência simples e objetiva de instruções para solucionar um determinado problema. 
+* **Algoritmo** é uma sequência simples e objetiva de instruções para solucionar um determinado problema.
 
 * Cada instrução é uma informação que indica ao computador uma ação básica a ser executada.
 
@@ -30,13 +32,15 @@
 
 * Um algoritmo é um procedimento computacional composto de três partes:
 
-    **1. Entrada de Dados:** São os dados informados pelo usuário.
+    1. **Entrada de Dados:** São os dados informados pelo usuário.
 
-    **2. Processamento de Dados:** São os procedimentos utilizados para chegar ao resultado. É responsável pela obtenção dos dados de saída com base nos dados de entrada.
+    2. **Processamento de Dados:** São os procedimentos utilizados para chegar ao resultado. É responsável pela obtenção dos dados de saída com base nos dados de entrada.
 
-    **3. Saída de Dados:** São os dados já processados.
+    3. **Saída de Dados:** São os dados já processados.
 
-* Um mesmo problema pode ser resolvido por vários algoritmos diferentes e se diferenciam pela maneira de como eles utilizam os recursos do computador (Algoritmos que dependem do tempo que demoram para serem executados x Algoritmos que dependem da quantidade de memória do computador).
+* Um mesmo problema pode ser resolvido por vários algoritmos diferentes e se diferenciam pela maneira de como eles utilizam os recursos do computador
+
+    * Algoritmos que dependem do tempo que demoram para serem executados x Algoritmos que dependem da quantidade de memória do computador.
 
 
 ### Alocação de Memória
@@ -133,10 +137,10 @@ int main(){
 
 * No código acima, as variáveis são empilhadas na **_stack_** à medida que são declaradas na **_main_**. Ao correr uma chamada da função **_malloc()_**, cria-se uma nova região de memória na **_heap_** e o ponteiro que aponta para essa região é empilhado na **_stack_**. As regiões na **_heap_** não são escolhidas de forma sequencial. Quando a função **_free()_** é chamada, a região associada a aquele ponteiro é liberada da **_heap_**, mas o ponteiro ainda continua na **_stack_**. Ao fim da **_main_**, todas as variáveis são removidas da **_stack_**. Porém, uma região da **_heap_** continua presente, pois ela foi alocada, mas nunca liberada.
 
-#### Alocação Estática x Alocação Dinâmica
+#### **Alocação Estática x Alocação Dinâmica**
 
 Alocação Estática (_stack_)  | Alocação Dinâmica (_heap_)
---------- | ------
+----- | -----
 Armazenado na memória RAM. | Armazenado na memória RAM.
 Variáveis são liberadas automaticamente no fim do escopo **(variáveis locais de funções)**. | Variáveis não são liberadas quando o escopo termina e devem ser liberadas manualmente.
 Alocação mais rápida que na **_heap_**. | Alocação mais lenta que na **_stack_**.
@@ -155,11 +159,15 @@ Geralmente possui um tamanho máximo predeterminado quando o programa inicia. | 
 * Algoritmos diferentes que resolvem um mesmo problema não necessariamente o fazem com a mesma eficiência.
 
 * Essas diferenças de eficiência podem ser:
+
     1. Irrelevantes para um pequeno número de elementos processados.
+    
     2. Crescer proporcionalmente com o número de elementos processados.
 
 * **A complexidade computacional** é usada para medir e comparar a eficiência dos algoritmos. Ela indica o custo ao se aplicar um determinado algoritmo.
+
     * **custo = memória + tempo.**
+
     * A **memória** indica quanto de espaço o algoritmo vai consumir e o **tempo**, a duração de execução.
 
 * Para analisar se um determinado algoritmo é eficiente, pode ser utilizar de uma **análise empírica** ou **análise matemática**.
@@ -195,7 +203,7 @@ Geralmente possui um tamanho máximo predeterminado quando o programa inicia. | 
 
 * Ela é frequentemente usada para avaliar o tempo de execução e o uso de recursos, como memória, em função do **tamanho da entrada do algoritmo**
 
-* Considera somente os custos dominantes do algoritmo. É o componente de um algoritmo que mais contribui para a sua complexidade temporal (tempo de execução) ou espacial (uso de memória) à medida que o tamanho da entrada aumenta.
+* Considera somente os **custos dominantes** do algoritmo. É o componente de um algoritmo que mais contribui para a sua complexidade temporal (tempo de execução) ou espacial (uso de memória) à medida que o tamanho da entrada aumenta.
 
 ~~~C
 int SumArray(int arr[], int size) {
@@ -210,7 +218,7 @@ int SumArray(int arr[], int size) {
 
 * Identificar o custo dominante é importante na análise de algoritmos, pois ajuda a compreender qual parte do algoritmo tem o maior impacto no desempenho à medida que a entrada cresce.
 
-* Detalhes de baixo nível, como a linguagem de programação utilizada, o __*hardware*__ no qual o algoritmo é executado, ou o conjunto de instruções da CPU, são ignorados.
+* Detalhes de baixo nível, como a linguagem de programação utilizada, o **_hardware_** no qual o algoritmo é executado, ou o conjunto de instruções da CPU, são ignorados.
 
 * Esse tipo de análise permite entender como um algoritmo se comporta à medida que o conjunto de dados de entrada cresce. Podendo assim expressar a relação entre o conjunto de dados de entrada e a quantidade de tempo necessária para processar esses dados.
 
@@ -237,18 +245,18 @@ for(i = 0; i < n; i++){ // Custo = 3 + 2n
 
 * Por serem instruções simples, elas possuem todas o mesmo custo (1).
 
-* No algoritmo, o comando de laço __*for*__ é utilizado para percorrer o __*array*__. Porém, antes mesmo de percorrer o __*array*__, ele precisa ser inicializado ao custo de uma instrução (i = 0). Além disso, mesmo que o __*array*__ tenha tamanho zero, ao menos uma comparação será executada (i < n), o que custa mais uma instrução **(2 instruções no total)**.
+* No algoritmo, o comando de laço **_for_** é utilizado para percorrer o **_array_**. Porém, antes mesmo de percorrer o **_array_**, ele precisa ser inicializado ao custo de uma instrução (i = 0). Além disso, mesmo que o **_array_** tenha tamanho zero, ao menos uma comparação será executada (i < n), o que custa mais uma instrução **(2 instruções no total)**.
 
-* Portanto, temos um total de duas instruções na inicialização do laço __*for*__. 
+* Portanto, temos um total de duas instruções na inicialização do laço **_for_**. 
 
-* Perceba que essas instruções serão executadas antes da primeira iteração do laço __*for*__.
+* Perceba que essas instruções serão executadas antes da primeira iteração do laço **_for_**.
 
-* O custo para executar o comando de laço __*for*__ é de: 2n instruções.
+* O custo para executar o comando de laço **_for_** é de: 2n instruções.
 
-* Ao fim de cada iteração do laço __*for*__, precisamos executar mais duas instruções: uma de incremento (i++) e uma comparação para verificar se vamos continuar no laço __*for*__ (i < n). No nosso algoritmo, o comando de laço __*for*__ será executado n vezes, que é o número de elementos no __*array*__. Assim, essas duas instruções também serão executadas n vezes, ou seja, o seu custo será __2n instruções__.
+* Ao fim de cada iteração do laço **_for_**, precisamos executar mais duas instruções: uma de incremento (i++) e uma comparação para verificar se vamos continuar no laço **_for_** (i < n). No nosso algoritmo, o comando de laço **_for_** será executado n vezes, que é o número de elementos no **_array_**. Assim, essas duas instruções também serão executadas n vezes, ou seja, o seu custo será **2n instruções**.
 
-* Se ignorarmos o que está dentro do corpo do laço __*for*__, veremos que o algoritmo necessita executar __3 + 2n instruções__.
-    1. **3 instruções** antes de iniciar o laço __*for*__;
-    2. **2 instruções** ao fim de cada laço __*for*__, o qual é executado **n vezes**;
+* Se ignorarmos o que está dentro do corpo do laço **_for_**, veremos que o algoritmo necessita executar **3 + 2n instruções**.
+    1. **3 instruções** antes de iniciar o laço **_for_**;
+    2. **2 instruções** ao fim de cada laço **_for_**, o qual é executado **n vezes**;
 
-* Assim, considerando um laço vazio, podemos definir uma função matemática que representa o custo do algoritmo em relação ao tamanho do __*array*__ de entrada: **_f(n) = 2n + 3_**.
+* Assim, considerando um laço vazio, podemos definir uma função matemática que representa o custo do algoritmo em relação ao tamanho do **_array_** de entrada: **f(n) = 2n + 3**.
