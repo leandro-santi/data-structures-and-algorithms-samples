@@ -45,6 +45,36 @@
 
 ### Alocação de Memória
 
+#### Áreas de Memória
+
+* A **_stack_** (pilha) e a **_heap_** (monte) são duas áreas principais de alocação de memória em um programa de computador.
+
+* Características da _stack_:
+
+    * A _stack_ é uma região de memória usada para armazenar informações sobre funções em execução e suas variáveis locais.
+
+    * Ela opera de maneira organizada e eficiente, seguindo um modelo de "último a entrar, primeiro a sair" (LIFO, Last-In-First-Out). Isso significa que a última função chamada é a primeira a ser concluída.
+
+    * As variáveis locais das funções são alocadas na _stack_. Elas são criadas quando a função é chamada e destruídas quando a função é concluída.
+
+    * O tamanho da _stack_ é geralmente limitado e estático. O espaço alocado para a _stack_ é definido em tempo de compilação ou execução e é compartilhado por todas as funções em execução.
+    
+    * A _stack_ é geralmente mais rápida em termos de acesso à memória, pois a alocação e a desalocação de variáveis são simples operações de incremento e decremento de ponteiros.
+
+* Características da _heap_:
+
+    * A _heap_ é uma área de memória usada para alocação dinâmica de dados. Ela é usada para armazenar objetos que não têm tempo de vida definido no escopo de uma função.
+
+    * A alocação na _heap_ é dinâmica e pode ser feita e desfeita em tempo de execução. Isso permite a criação de objetos com tempo de vida que não está limitado ao escopo da função.
+
+    * A _heap_ é tipicamente maior e não tem um tamanho fixo. O espaço na _heap_ é alocado sob demanda e pode crescer conforme necessário (até que a memória do sistema seja esgotada).
+
+    * O acesso à memória na _heap_ pode ser um pouco mais lento, já que a alocação e a desalocação de memória envolvem alocação dinâmica e liberação de recursos.
+
+* Em resumo, a _stack_ é usada para armazenar informações relacionadas à execução de funções, incluindo variáveis locais, e é eficiente, mas limitada em tamanho. A _heap_ é usada para alocar dados dinamicamente e tem um tamanho dinâmico, mas com um custo potencialmente mais alto em termos de acesso à memória.
+
+* **É importante lembrar** que a divisão entre a _stack_ e a _heap_ na memória é uma abstração criada para facilitar o gerenciamento de memória e o acesso aos dados em um programa. Na realidade, essas duas áreas não são necessariamente separadas fisicamente, mas são gerenciadas pelo sistema operacional e pela linguagem de programação.
+
 ##### Alocação Estática
 
 * Na alocação estática de memória, o programador não precisa se preocupar em reservar memória para seus dados.
