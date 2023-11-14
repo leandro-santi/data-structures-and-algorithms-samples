@@ -49,7 +49,7 @@
 
 * A **_stack_** (pilha) e a **_heap_** (monte) são duas áreas principais de alocação de memória em um programa de computador.
 
-* Características da _stack_:
+* Características da **_stack_**:
 
     * A _stack_ é uma região de memória usada para armazenar informações sobre funções em execução e suas variáveis locais.
 
@@ -61,7 +61,7 @@
     
     * A _stack_ é geralmente mais rápida em termos de acesso à memória, pois a alocação e a desalocação de variáveis são simples operações de incremento e decremento de ponteiros.
 
-* Características da _heap_:
+* Características da **_heap_**:
 
     * A _heap_ é uma área de memória usada para alocação dinâmica de dados. Ela é usada para armazenar objetos que não têm tempo de vida definido no escopo de uma função.
 
@@ -75,7 +75,7 @@
 
 * **É importante lembrar** que a divisão entre a _stack_ e a _heap_ na memória é uma abstração criada para facilitar o gerenciamento de memória e o acesso aos dados em um programa. Na realidade, essas duas áreas não são necessariamente separadas fisicamente, mas são gerenciadas pelo sistema operacional e pela linguagem de programação.
 
-##### Alocação Estática
+#### Alocação Estática
 
 * Na alocação estática de memória, o programador não precisa se preocupar em reservar memória para seus dados.
 
@@ -221,7 +221,7 @@ Geralmente possui um tamanho máximo predeterminado quando o programa inicia. | 
     * Resultado pode ser mascarado pelo hardware ou software utilizados.
     * Qual a natureza dos dados? Dados reais, aleatórios ou perversos (piores casos)?
 
-##### Análise Matemática
+#### Análise Matemática
 
 * A medição do tempo gasto por um algoritmo pode ser feita de maneira independente do hardware ou da linguagem usada na sua implementação.
 
@@ -252,7 +252,7 @@ int SumArray(int arr[], int size) {
 
 * Esse tipo de análise permite entender como um algoritmo se comporta à medida que o conjunto de dados de entrada cresce. Podendo assim expressar a relação entre o conjunto de dados de entrada e a quantidade de tempo necessária para processar esses dados.
 
-###### Contando instruções de um algoritmo
+##### Contando instruções de um algoritmo
 
 * **Instrução simples** é uma instrução que pode ser executada diretamente pelo CPU, ou algo muito perto disso.
 
