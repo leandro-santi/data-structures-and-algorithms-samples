@@ -3,9 +3,9 @@
 
 ## Sobre
 
-* code samples and basic explanations. (exemplos de código e explicações básicas.)
+* Exemplos de código e explicações.
 
-* This repository aims to help brazilian computer science students to get code samples of data structure and algorithms. (Este repositório tem como objetivo ajudar estudantes brasileiros de ciência da computação a obter amostras de código de estruturas de dados e algoritmos.)
+* Este repositório tem como objetivo ajudar estudantes brasileiros dos cursos de computação a obter amostras de código de estruturas de dados e algoritmos.
 
 * **As explicações em cada tópico abordado irão estar inicialmente em pt-br.**
 
