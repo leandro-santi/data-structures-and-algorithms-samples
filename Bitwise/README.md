@@ -42,6 +42,24 @@
 
     * Logo, isso não é bom para dispositivos que tem uma quantidade limitada de memória.
 
+* O tamanho dos tipos primitivos em bytes pode variar dependendo da linguagem de programação e da arquitetura do sistema em que o programa está sendo executado.
+
+* Na linguagem de programação C/C++, que é frequentemente utilizada como referência, esses são alguns tamanhos comuns para os tipos primitivos:
+
+    * **char** = 1 byte = 8 bits
+
+    * **int** = 4 bytes = 32 bits
+
+    * **float** = 4 bytes = 32 bits
+
+    * **double** = 8 bytes = 64 bits
+    
+    * **short** = 2 bytes = 16 bits
+
+    * **long** = 4/8 bytes = 32/64 bits
+
+    * **long long** = 8 bytes = 64 bits
+
 
 ### Operadores Bit-a-Bit
 
