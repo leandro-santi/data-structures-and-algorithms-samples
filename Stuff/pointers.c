@@ -11,7 +11,6 @@ void pointer_2(int *y){
 }
 
 int main(){
-
     int num_int = 10;
     float num_float = 3.0;
 

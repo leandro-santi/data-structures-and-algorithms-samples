@@ -150,7 +150,7 @@ int main(){
 
 ~~~C
     int *ptr;
-    ptr = (int *)malloc(sizeof(int));
+    ptr = (int *) malloc(sizeof(int));
     *ptr = 42; // Acesso aos dados por meio do ponteiro
 ~~~
 
