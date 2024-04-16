@@ -3,14 +3,10 @@
 
 ## Sobre
 
-* Exemplos de código e explicações.
-
-* Este repositório tem como objetivo ajudar estudantes brasileiros dos cursos de computação a obter amostras de código de estruturas de dados e algoritmos.
-
-* **As explicações em cada tópico abordado irão estar inicialmente em pt-br.**
+* Este repositório tem como objetivo ajudar estudantes brasileiros dos cursos de computação a obter amostras de código de estruturas de dados e algoritmos, e explicações simplificadas sobre os conceitos da área.
 
 
-## Conceitos Importantes
+## Conceitos Introdutórios
 
 ### Estrutura de Dados
 
@@ -28,6 +24,16 @@
 ### Algoritmos 
 
 * **Algoritmo** é uma sequência simples e objetiva de instruções para solucionar um determinado problema.
+
+* Lembra uma receita, por exemplo, de bolo:
+    
+    * aqueça o forno;
+    * unte uma forma;
+    * numa bacia:
+        * bata os ingredientes;
+        * até virar um creme;
+    * deite a massa na forma;
+    * leve ao forno.
 
 * Cada instrução é uma informação que indica ao computador uma ação básica a ser executada.
 
@@ -121,7 +127,9 @@ int main(){
 
 * Na alocação dinâmica de memória, o programador tem total controle sobre o tamanho e o tempo de vida das posições de memória dos seus dados.
 
-* O programador é responsável por reservar a quantidade de memória necessária para seus dados. Área de memória chamada **_heap_**.
+* O programador é responsável por reservar a quantidade de memória necessária para seus dados.
+
+* Área de memória chamada **_heap_**.
 
 * A **_heap_** é uma área bem maior que a **_stack_**. É ideal para alocar muitos objetos / objetos grandes.
 
@@ -146,7 +154,7 @@ int main(){
 
 * Os blocos de memória podem ser alocados, realocados, liberados para diferentes objetivos durante a execução do programa.
 
-* O acesso aos dados é feito por meio de **ponteiros** que apontam para os blocos de memória alocados, e não mais variáveis.
+* O acesso aos dados é feito por meio de **ponteiros** que apontam para os blocos de memória alocados, e não mais por variáveis.
 
 ~~~C
     int *ptr;
@@ -221,12 +229,12 @@ Geralmente possui um tamanho máximo predeterminado quando o programa inicia. | 
 
 * Desvantagens:
     * Necessidade de ter o algoritmo pronto e funcionando.
-    * Resultado pode ser mascarado pelo hardware ou software utilizados.
+    * Resultado pode ser mascarado pelo _hardware_ ou _software_ utilizados.
     * Qual a natureza dos dados? Dados reais, aleatórios ou perversos (piores casos)?
 
 #### Análise Matemática
 
-* A medição do tempo gasto por um algoritmo pode ser feita de maneira independente do hardware ou da linguagem usada na sua implementação.
+* A medição do tempo gasto por um algoritmo pode ser feita de maneira independente do _hardware_ ou da linguagem usada na sua implementação.
 
 * A **análise matemática** permite um estudo formal de um algoritmo ao nível de **ideia**.
 
@@ -251,7 +259,7 @@ int SumArray(int arr[], int size) {
 
 * Identificar o custo dominante é importante na análise de algoritmos, pois ajuda a compreender qual parte do algoritmo tem o maior impacto no desempenho à medida que a entrada cresce.
 
-* Detalhes de baixo nível, como a linguagem de programação utilizada, o **_hardware_** no qual o algoritmo é executado, ou o conjunto de instruções da CPU, são ignorados.
+* Detalhes de baixo nível, como a **linguagem de programação** utilizada, o **_hardware_** no qual o algoritmo é executado, ou o conjunto de instruções da CPU, são ignorados.
 
 * Esse tipo de análise permite entender como um algoritmo se comporta à medida que o conjunto de dados de entrada cresce. Podendo assim expressar a relação entre o conjunto de dados de entrada e a quantidade de tempo necessária para processar esses dados.
 
