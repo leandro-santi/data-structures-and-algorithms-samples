@@ -9,6 +9,7 @@
 * Tem um desempenho quase sempre superior quando comparado ao _bubble sort_.
 
 * O algoritmo _selection sort_ divide o _array_ em duas partes:
+
     * Uma parte ordenada (à esquerda);
     * Outra parte que não foi ordenada (à direita).
 
@@ -17,7 +18,6 @@
 * Em seguida, o algoritmo avança para a próxima posição do _array_ e repete esse processo. Isso é feito até que todo o _array_ esteja ordenado.
 
 ~~~C
-
 void selection_sort(int *arr, int N){
     int i, j, smaller, temp;
     
@@ -37,7 +37,6 @@ void selection_sort(int *arr, int N){
         }
     }
 }
-
 ~~~
 
 * No algoritmo acima, o princípio de funcionamento desse algoritmo é a seleção do melhor elemento para ocupar uma posição do _array_.

@@ -1,10 +1,6 @@
 # data-structures-and-algorithms-samples
 
-
-## Sobre
-
-* Este repositório tem como objetivo ajudar estudantes brasileiros dos cursos de computação a obter amostras de código de estruturas de dados e algoritmos, e explicações simplificadas sobre os conceitos da área.
-
+Este repositório tem como objetivo ajudar estudantes brasileiros dos cursos de computação a obter amostras de código de estruturas de dados e algoritmos, e explicações simplificadas sobre os conceitos da área.
 
 ## Conceitos Introdutórios
 
@@ -20,8 +16,7 @@
 
 * A organização de forma coerente dos dados permite a diminuição do custo de execução de um algoritmo em termos de tempo de execução, consumo de memória ou em ambos.
 
-
-### Algoritmos 
+### Algoritmos
 
 * **Algoritmo** é uma sequência simples e objetiva de instruções para solucionar um determinado problema.
 
@@ -42,15 +37,12 @@
 * Um algoritmo é um procedimento computacional composto de três partes:
 
     1. **Entrada de Dados:** São os dados informados pelo usuário.
-
     2. **Processamento de Dados:** São os procedimentos utilizados para chegar ao resultado. É responsável pela obtenção dos dados de saída com base nos dados de entrada.
-
     3. **Saída de Dados:** São os dados já processados.
 
-* Um mesmo problema pode ser resolvido por vários algoritmos diferentes e se diferenciam pela maneira de como eles utilizam os recursos do computador
+* Um mesmo problema pode ser resolvido por vários algoritmos diferentes e se diferenciam pela maneira de como eles utilizam os recursos do computador.
 
     * Algoritmos que dependem do tempo que demoram para serem executados x Algoritmos que dependem da quantidade de memória do computador.
-
 
 ### Alocação de Memória
 
@@ -61,23 +53,16 @@
 * Características da **_stack_**:
 
     * A _stack_ é uma região de memória usada para armazenar informações sobre funções em execução e suas variáveis locais.
-
     * Ela opera de maneira organizada e eficiente, seguindo um modelo de "último a entrar, primeiro a sair" (LIFO, Last-In-First-Out). Isso significa que a última função chamada é a primeira a ser concluída.
-
     * As variáveis locais das funções são alocadas na _stack_. Elas são criadas quando a função é chamada e destruídas quando a função é concluída.
-
     * O tamanho da _stack_ é geralmente limitado e estático. O espaço alocado para a _stack_ é definido em tempo de compilação ou execução e é compartilhado por todas as funções em execução.
-    
     * A _stack_ é geralmente mais rápida em termos de acesso à memória, pois a alocação e a desalocação de variáveis são simples operações de incremento e decremento de ponteiros.
 
 * Características da **_heap_**:
 
     * A _heap_ é uma área de memória usada para alocação dinâmica de dados. Ela é usada para armazenar objetos que não têm tempo de vida definido no escopo de uma função.
-
     * A alocação na _heap_ é dinâmica e pode ser feita e desfeita em tempo de execução. Isso permite a criação de objetos com tempo de vida que não está limitado ao escopo da função.
-
     * A _heap_ é tipicamente maior e não tem um tamanho fixo. O espaço na _heap_ é alocado sob demanda e pode crescer conforme necessário (até que a memória do sistema seja esgotada).
-
     * O acesso à memória na _heap_ pode ser um pouco mais lento, já que a alocação e a desalocação de memória envolvem alocação dinâmica e liberação de recursos.
 
 * Em resumo, a _stack_ é usada para armazenar informações relacionadas à execução de funções, incluindo variáveis locais, e é eficiente, mas limitada em tamanho. A _heap_ é usada para alocar dados dinamicamente e tem um tamanho dinâmico, mas com um custo potencialmente mais alto em termos de acesso à memória.
@@ -192,7 +177,6 @@ Pode ocorrer _stack overflow_ quando for muito usada. | A alocação pode falhar
 É usada quando se sabe exatamente o quanto de espaço será alocado antes do tempo de compilação e esse espaço não é muito grande. | É usada quando não se sabe exatamente o quanto de espaço será alocado antes do tempo de compilação ou esse espaço é muito grande.
 Geralmente possui um tamanho máximo predeterminado quando o programa inicia. | Responsável por vazamentos de memória.
 
-
 ### Análise da Complexidade de Algoritmos
 
 * Podemos fazer algoritmos mais eficientes? É a ***Análise de Algoritmos*** que responde essa questão.
@@ -202,13 +186,11 @@ Geralmente possui um tamanho máximo predeterminado quando o programa inicia. | 
 * Essas diferenças de eficiência podem ser:
 
     1. Irrelevantes para um pequeno número de elementos processados.
-    
     2. Crescer proporcionalmente com o número de elementos processados.
 
 * **A complexidade computacional** é usada para medir e comparar a eficiência dos algoritmos. Ela indica o custo ao se aplicar um determinado algoritmo.
 
     * **custo = memória + tempo.**
-
     * A **memória** indica quanto de espaço o algoritmo vai consumir e o **tempo**, a duração de execução.
 
 * Para analisar se um determinado algoritmo é eficiente, pode ser utilizar de uma **análise empírica** ou **análise matemática**.
@@ -222,12 +204,14 @@ Geralmente possui um tamanho máximo predeterminado quando o programa inicia. | 
 * Isso envolve medir o tempo de execução e, em alguns casos, o uso de recursos, como memória, à medida que o algoritmo é executado com entradas de teste reais ou geradas aleatoriamente.
 
 * Vantagens:
+
     * Avaliar o desempenho de uma determinada configuração de computador / linguagem.
     * Considerar custos não aparentes (Por exemplo, a memória alocada).
     * Comparar computadores.
     * Comparar linguagens.
 
 * Desvantagens:
+
     * Necessidade de ter o algoritmo pronto e funcionando.
     * Resultado pode ser mascarado pelo _hardware_ ou _software_ utilizados.
     * Qual a natureza dos dados? Dados reais, aleatórios ou perversos (piores casos)?
@@ -278,6 +262,7 @@ for(i = 0; i < n; i++){ // Custo = 3 + 2n
 ~~~
 
 * No trecho de código acima é possível ser encontrado as seguintes instruções:
+
     1. Atribuição de um valor a uma variável;
     2. Acesso ao valor de determinado elemento do _array_;
     3. Comparação entre dois valores;
@@ -297,6 +282,7 @@ for(i = 0; i < n; i++){ // Custo = 3 + 2n
 * Ao fim de cada iteração do laço **_for_**, precisamos executar mais duas instruções: uma de incremento (i++) e uma comparação para verificar se vamos continuar no laço **_for_** (i < n). No nosso algoritmo, o comando de laço **_for_** será executado n vezes, que é o número de elementos no **_array_**. Assim, essas duas instruções também serão executadas n vezes, ou seja, o seu custo será **2n instruções**.
 
 * Se ignorarmos o que está dentro do corpo do laço **_for_**, veremos que o algoritmo necessita executar **3 + 2n instruções**.
+
     1. **3 instruções** antes de iniciar o laço **_for_**;
     2. **2 instruções** ao fim de cada laço **_for_**, o qual é executado **n vezes**;
 

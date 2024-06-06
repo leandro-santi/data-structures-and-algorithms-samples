@@ -7,6 +7,7 @@ void bubble_sort(int *arr, int N){
 
     do{
         flag = 0;
+        
         for(i = 0; i < end-1; i++){
             if(arr[i] > arr[i+1]){
                 aux = arr[i];
@@ -15,9 +16,9 @@ void bubble_sort(int *arr, int N){
                 flag = 1;
             }
         }
+
         end--;
     }while(flag != 0);
-
 }
 
 int main(){

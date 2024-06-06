@@ -9,12 +9,12 @@
 * O princípio de funcionamento desse algoritmo é a troca de valores em posições consecutivas de um _array_ para que fiquem ordenados da forma desejada.
 
 ~~~C
-
 void bubble_sort(int *arr, int N){
     int i, flag, aux, end = N;
 
     do{
         flag = 0;
+
         for(i = 0; i < end-1; i++){
             if(arr[i] > arr[i+1]){
                 aux = arr[i];
@@ -23,11 +23,10 @@ void bubble_sort(int *arr, int N){
                 flag = 1;
             }
         }
+
         end--;
     }while(flag != 0);
-
 }
-
 ~~~
 
 * No algoritmo acima, ao se comparar dois valores em sequência, pode ser que eles não estejam ordenados. Caso não estejam, o algoritmo trata de realizar a troca de lugar dos valores.
@@ -42,7 +41,8 @@ void bubble_sort(int *arr, int N){
 
 * Sua eficiência diminui drasticamente à medida que o número de elementos no _array_ aumenta.
 
-* Considerando um _array_ de N elementos, o tempo de execução do _bubble sort_ é:
-    * O(N) -> Melhor Caso: Os elementos já estão ordenados.
-    * O(N^2) -> Pior Caso: Os elementos estão ordenados em ordem inversa.
-    * O(N^2) -> Médio Caso: Os elementos estão embaralhados.
+* Considerando um _array_ de **N** elementos, o tempo de execução do _bubble sort_ é:
+
+    * _O(N)_ -> Melhor Caso: Os elementos já estão ordenados.
+    * _O(N^2)_ -> Pior Caso: Os elementos estão ordenados em ordem inversa.
+    * _O(N^2)_ -> Médio Caso: Os elementos estão embaralhados.
