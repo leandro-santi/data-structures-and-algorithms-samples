@@ -6,6 +6,7 @@ using namespace std;
 int partition(int *vetor, int p, int r){
     int x = vetor[r];
     int i = p - 1, aux;
+
     for(int j = p; j <= r - 1; j++){
         if(vetor[j] <= x){
             i+=1;
@@ -14,6 +15,7 @@ int partition(int *vetor, int p, int r){
             vetor[j] = aux;
         }
     }
+    
     aux = vetor[i + 1];
     vetor[i + 1] = vetor[r];
     vetor[r] = aux;

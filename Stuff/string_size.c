@@ -2,7 +2,9 @@
 
 int strlen(char *string){
     int i;
+
     for(i = 0; string[i] != '\0'; i++) {} // Counting
+
     return i;
 }
 
@@ -15,18 +17,23 @@ int strpos(char *string_1, char *string_2){
             if(j_2 == len_2) return i;
         } 
     }
+
     return -1;
 }
 
 void strcat(char *string_1, char *string_2){
     int i, j;
+
     for(i = 0; string_1[i] != '\0'; i++){ }
+
     for(j = 0; string_2[j] != '\0'; string_1[i++] = string_2[j++]){ }
 }
 
 void substr(char *string_1, char *string_2, int i, int j){
     int k, m;
+
     for(k = i, m = 0; m < j; string_1[k++] = string_2[m++]){}
+    
     string_2[m] = '\0'; // Recebe o fim NULL
 }
 

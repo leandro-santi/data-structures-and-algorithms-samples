@@ -9,16 +9,17 @@ void xxx_sort(int *arr){
 
     for(int i = 0; i < MAX-1; i++){
         min = i;
+        
         for(int j = i + 1; j < MAX; j++){
             if(arr[j] < arr[min]){
                 min = j;
             }
         }
+
         temp = arr[i];
         arr[i] = arr[min];
         arr[min] = temp; 
     }
-
 }
 
 int main(){

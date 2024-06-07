@@ -7,7 +7,6 @@ string target = "METHINKS IT IS LIKE A WEASEL";
 
 // Reprodution
 void generateRandomString(string *s){
-
     for(int i = 0; i < 28; i++){
 
         *s += stuff[rand() % 29];
@@ -17,24 +16,18 @@ void generateRandomString(string *s){
 
 // Recombination
 char returnRandomCharacter(){
-
     return stuff[rand() % 29];
-
 }
 
 // Selection
 int compareStrings(string s){
-
     int score = 0;
 
     for(int i = 0; i < 29; i++){
-
         if(s[i] == target[i]) score++;
-
     }
 
     return score;
-
 }
 
 // Mutation
@@ -45,15 +38,11 @@ void mutation(string *s, int *score){
     saveCopy = copy = *s;
 
     for(int i = 0; i < 100; i++){
-        
         for(int j = 0; j < 29; j++){
-
             mutation = 1 + rand() % 100;
-
             if(mutation <= 5){
                 copy[j] = returnRandomCharacter();
             }
-
         }
 
         count = compareStrings(copy);
@@ -64,13 +53,10 @@ void mutation(string *s, int *score){
         }
 
         *s = saveCopy;
-
     }
-
 }
 
 int main(){
-
     string phrase = "";
     int generation = 0, score = 0;
     

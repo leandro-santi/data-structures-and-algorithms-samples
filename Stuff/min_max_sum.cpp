@@ -7,6 +7,7 @@ using namespace std;
 
 void min_max_sum(int *v){
     int min = 0, max = 0;
+    
     for(int i = 0; i < 5; i++){
         if(i > 0) max += v[i]; // Calculating the max sum
         if(i < 4) min += v[i]; // Calculating the min sum

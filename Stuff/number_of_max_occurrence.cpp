@@ -18,18 +18,15 @@ int countMaxNumberOccurrences(int *v, int size, int *number){
         if(v[i] == max_number){
             count++;
         }
-
         if(v[i] > max_number){
             max_number = v[i];
             count = 1;
         }
-
     }
 
     *number = max_number;
 
     return count;
-
 }
 
 int main(){

@@ -36,7 +36,8 @@ int main(){
     void (*fun_ptr_arr[])(int, int) = {add, subtract, multiply};
     int ch, a = 15, b = 10; 
   
-    printf("Enter Choice: 0 for add, 1 for subtract and 2 for multiply\n"); 
+    printf("Enter Choice: 0 for add, 1 for subtract and 2 for multiply\n");
+    
     scanf("%d", &ch); 
   
     if (ch > 2) return 0; 
