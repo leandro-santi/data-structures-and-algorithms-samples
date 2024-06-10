@@ -1,6 +1,6 @@
 ## Bubble Sort
 
-* Ordenação por **"bolha"** - bubble sort.
+* Ordenação por **"bolha"** - _bubble sort_.
 
 * O algoritmo _bubble sort_ é um dos algoritmos de ordenação mais conhecidos e comuns que existem.
 
