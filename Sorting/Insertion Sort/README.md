@@ -1,6 +1,6 @@
 ## Insertion Sort
 
-* Ordenação por **"inserção"** — _insertion sort_
+* Ordenação por **"inserção"** — _insertion sort_.
 
 * Bastante simples.
 
@@ -16,20 +16,29 @@
 
 * Desse modo, sempre terá uma posição livre para inserir o valor da posição **_i_** em sem devido lugar.
 
+* Exemplo da ideia do algoritmo:
+
+    1. Inicialmente temos um _array_ não ordenado: [7, 12, 9, 11, 3] -> Podemos considerar o primeiro valor como a parte inicial ordenada do _array_;
+    2. O próximo valor agora deve ser movido para a posição correta na parte ordenada do array: [7, **12**, 9, 11, 3] -> O valor 12 já está ordenado;
+    3. O próximo valor agora deve ser movido para a posição correta na parte ordenada do array: [7, 12, **9**, 11, 3] -> O valor 9 deve ser movido;
+    4. O próximo valor agora deve ser movido para a posição correta na parte ordenada do array: [7, 9, 12, **11**, 3] -> O valor 11 deve ser movido;
+    5. O próximo valor agora deve ser movido para a posição correta na parte ordenada do array: [7, 9, 11, 12, **3**] -> O valor 3 deve ser movido;
+    6. E assim, o _array_ [3, 7, 9, 11, 12] foi ordenado.
+
 ~~~C
-void insertion_sort(int *arr, int N){
+void insertion_sort(int *arr, int n){
     int i, j, aux;
     
-    for(i = 1; i < N; i++){
+    for(i = 1; i < n; i++){
         aux = arr[i];
         j = i;
-        
+
         // Deslocando os valores à esquerda
         while(j > 0 && arr[j-1] > aux){
             arr[j] = arr[j-1];
             j--;
         }
-        
+
         // Inserindo na frente dos valores deslocados
         arr[j] = aux;
     }

@@ -2,13 +2,13 @@
 
 using namespace std;
 
-void selection_sort(int *arr, int N){
+void selection_sort(int *arr, int n){
     int i, j, smaller, temp;
     
-    for(i = 0; i < N-1; i++){
+    for(i = 0; i < n-1; i++){
         smaller = i;
         
-        for(j = i + 1; j < N; j++){
+        for(j = i + 1; j < n; j++){
             if(arr[j] < arr[smaller]){
                 smaller = j;
             }
@@ -24,10 +24,11 @@ void selection_sort(int *arr, int N){
 
 int main(){
     int arr[] = {5, 3, 1, 2, 4};
+    int n = 5;
 
-    selection_sort(arr, 5);
+    selection_sort(arr, n);
 
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < n; i++){
         cout << arr[i] << " ";
     }
 

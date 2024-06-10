@@ -8,24 +8,32 @@
 
 * O princípio de funcionamento desse algoritmo é a troca de valores em posições consecutivas de um _array_ para que fiquem ordenados da forma desejada.
 
+* Exemplo da ideia do algoritmo:
+
+    1. Inicialmente temos um _array_ não ordenado: [7, 12, 9, 11, 3];
+    2. É analisado os dois primeiros valores: [**7, 12**, 9, 11, 3] -> Estão ordenados;
+    3. É analisado os valores seguintes: [7, **12, 9**, 11, 3] -> Realizar a troca;
+    4. É analisado os valores seguintes: [7, 9, **12, 11**, 3] -> Realizar a troca;
+    4. É analisado os valores seguintes: [7, 9, 11, **12, 3**] -> Realizar a troca;
+    5. E assim o _loop_ reinicia e continua até que o _array_ [7, 9, 11, 3, 12] esteja ordenado.
+
 ~~~C
-void bubble_sort(int *arr, int N){
-    int i, flag, aux, end = N;
+void bubble_sort(int *arr, int n){
+    int i, j;
+    bool swaped;
 
-    do{
-        flag = 0;
+    for(i = 0; i < n-1; i++){
+        swaped = false;
 
-        for(i = 0; i < end-1; i++){
-            if(arr[i] > arr[i+1]){
-                aux = arr[i];
-                arr[i] = arr[i+1];
-                arr[i+1] = aux;
-                flag = 1;
+        for(j = 0; j < n-1-i; j++){
+            if(arr[j] > arr[j+1]){
+                swaped = true;
+                swap(arr, j, j+1);
             }
         }
 
-        end--;
-    }while(flag != 0);
+        if(!swaped) break;
+    }
 }
 ~~~
 

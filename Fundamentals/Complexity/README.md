@@ -35,7 +35,7 @@
 
     * Necessidade de ter o algoritmo pronto e funcionando.
     * Resultado pode ser mascarado pelo _hardware_ ou _software_ utilizados.
-    * Qual a natureza dos dados? Dados reais, aleatórios ou perversos (piores casos)?
+    * Qual a natureza dos dados? Dados reais, aleatórios ou perversos (piores casos).
 
 ### Análise Matemática
 
@@ -54,10 +54,12 @@
 ~~~C
 int SumArray(int arr[], int size) {
     int sum = 0;
+
     // Custo dominante é o loop for que itera por todos os elementos de um array e realiza alguma operação neles.
     for (int i = 0; i < size; i++) {
         sum += arr[i];
     }
+
     return sum;
 }
 ~~~
@@ -73,13 +75,13 @@ int SumArray(int arr[], int size) {
 * **Instrução simples** é uma instrução que pode ser executada diretamente pelo CPU, ou algo muito perto disso.
 
 ~~~C
-int greater = arr[0], i; // Custo = 1 Instrução
+    int greater = arr[0], i; // Custo = 1 Instrução
 
-for(i = 0; i < n; i++){ // Custo = 3 + 2n
-    if(arr[i] >= greater){
-        greater = arr[i];
+    for(i = 0; i < n; i++){ // Custo = 3 + 2n
+        if(arr[i] >= greater){
+            greater = arr[i];
+        }
     }
-}
 ~~~
 
 * No trecho de código acima é possível ser encontrado as seguintes instruções:
@@ -105,6 +107,6 @@ for(i = 0; i < n; i++){ // Custo = 3 + 2n
 * Se ignorarmos o que está dentro do corpo do laço **_for_**, veremos que o algoritmo necessita executar **3 + 2n instruções**.
 
     1. **3 instruções** antes de iniciar o laço **_for_**;
-    2. **2 instruções** ao fim de cada laço **_for_**, o qual é executado **n vezes**;
+    2. **2 instruções** ao fim de cada laço **_for_**, o qual é executado **n vezes**.
 
 * Assim, considerando um laço vazio, podemos definir uma função matemática que representa o custo do algoritmo em relação ao tamanho do **_array_** de entrada: **f(n) = 2n + 3**.

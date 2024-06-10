@@ -29,10 +29,11 @@ void bubble_sort(int *arr, int n){
 
 int main(){
     int arr[] = {5, 3, 1, 2, 4};
+    int n = 5;
 
-    bubble_sort(arr, 5);
+    bubble_sort(arr, n);
 
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < n; i++){
         cout << arr[i] << " ";
     }
 

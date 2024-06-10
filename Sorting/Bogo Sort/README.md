@@ -49,8 +49,8 @@ void bogo_sort(int *arr, int n){
 }
 ~~~
 
-* Inicialmente a _array_ é verificado se está ordenado.
+* Inicialmente é verificado se o _array_ está ordenado pela função _is_sorted_.
 
-* Caso o _array_ não esteja ordenado, sendo verificado na função _is_sorted_, a função _sort_ ordena novamente o _array_ trocando as posições de forma aleatória.
+* Caso o _array_ não esteja ordenado, a função _sort_ ordena novamente o _array_ trocando as posições de forma aleatória.
 
-* Isso se repete até que o _array_ esteja ordenada.
+* Isso se repete até que o _array_ esteja ordenado.

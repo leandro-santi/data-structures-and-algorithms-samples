@@ -2,10 +2,10 @@
 
 using namespace std;
 
-void insertion_sort(int *arr, int N){
+void insertion_sort(int *arr, int n){
     int i, j, aux;
     
-    for(i = 1; i < N; i++){
+    for(i = 1; i < n; i++){
         aux = arr[i];
         j = i;
         
@@ -18,13 +18,13 @@ void insertion_sort(int *arr, int N){
     }
 }
 
-int main()
-{
+int main(){
     int arr[] = {5, 3, 1, 2, 4};
+    int n = 5;
 
-    insertion_sort(arr, 5);
+    insertion_sort(arr, n);
 
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < n; i++){
         cout << arr[i] << " ";
     }
 

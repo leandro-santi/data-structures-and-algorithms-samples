@@ -46,6 +46,7 @@
 ~~~C
 int sum(int a, int b){ // Stack([a = 2 | b = 3], [y = 3 | x = 2])
     int c = a + b; // Stack([c = 5 | a = 2 | b = 3], [z | y = 3 | x = 2])
+    
     return c;
 }
 

@@ -1,6 +1,6 @@
 ## Selection Sort
 
-* Ordenação por **"seleção"** - _selection sort_
+* Ordenação por **"seleção"** - _selection sort_.
 
 * É um algoritmo de ordenação bastante simples.
 
@@ -17,14 +17,22 @@
 
 * Em seguida, o algoritmo avança para a próxima posição do _array_ e repete esse processo. Isso é feito até que todo o _array_ esteja ordenado.
 
+* Exemplo da ideia do algoritmo:
+
+    1. Inicialmente temos um _array_ não ordenado: [7, 12, 9, 11, 3];
+    2. Percorra o _array_ até achar o menor valor: [7, 12, 9, 11, **3**] -> Valor 3 é o menor;
+    3. Mova o menor valor para o início do _array_: [**3**, 12, 9, 11, 7];
+    4. É analisado o restante dos valores: [3, 12, 9, 11, **7**]; -> Valor 7 é o menor e vai ser movido para frente;
+    5. E assim, o _array_ [3, 7, 9, 11, 12] foi ordenado.
+
 ~~~C
-void selection_sort(int *arr, int N){
+void selection_sort(int *arr, int n){
     int i, j, smaller, temp;
     
-    for(i = 0; i < N-1; i++){
+    for(i = 0; i < n-1; i++){
         smaller = i;
         
-        for(j = i + 1; j < N; j++){
+        for(j = i + 1; j < n; j++){
             if(arr[j] < arr[smaller]){
                 smaller = j;
             }
@@ -47,7 +55,7 @@ void selection_sort(int *arr, int N){
 
 ~~~C
     // Procura o menor valor à direita:
-    for(j = i + 1; j < N; j++){
+    for(j = i + 1; j < n; j++){
         if(arr[j] < arr[smaller]){
             smaller = j;
         }

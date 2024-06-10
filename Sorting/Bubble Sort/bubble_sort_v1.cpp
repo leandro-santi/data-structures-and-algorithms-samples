@@ -2,8 +2,8 @@
 
 using namespace std;
 
-void bubble_sort(int *arr, int N){
-    int i, flag, aux, end = N;
+void bubble_sort(int *arr, int n){
+    int i, flag, aux, end = n;
 
     do{
         flag = 0;
@@ -23,10 +23,11 @@ void bubble_sort(int *arr, int N){
 
 int main(){
     int arr[] = {5, 3, 1, 2, 4};
+    int n = 5;
 
-    bubble_sort(arr, 5);
+    bubble_sort(arr, n);
 
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < n; i++){
         cout << arr[i] << " ";
     }
 
