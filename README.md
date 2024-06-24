@@ -15,16 +15,30 @@ Este repositório tem como objetivo ajudar estudantes brasileiros dos cursos de 
 
 ### Fundamentals
 
-* aaa
+* [Introdução](./Fundamentals)
+* [Alocação de Memória](./Fundamentals/Memory)
+* [Análise da Complexidade de Algoritmos](./Fundamentals/Complexity)
+* [Arrays](./Fundamentals/Arrays)
 
 ### Sorting
 
-* bbb
+* [Introdução à Ordenação](./Sorting)
+* [Bubble Sort](./Sorting/Bubble%20Sort)
+* [Selection Sort](./Sorting/Selection%20Sort)
+* [Insertion Sort](./Sorting/Insertion%20Sort)
+* [Merge Sort](./Sorting/Merge%20Sort)
+
+### Stuff
+
+* [Algorithms Stuff](./Stuff)
+* [Bitwise](./Bitwise)
+* [Bogo Sort](./Sorting/Bogo%20Sort)
 
 ## References
 
-* Estruturas de Dados Usando C -  Aaron M. Tenenbaum.
-* Algoritmos e Estruturas de Dados em Linguagem C -  André Ricardo Backes.
+Estruturas de Dados Usando C -  Aaron M. Tenenbaum.
+
+Algoritmos e Estruturas de Dados em Linguagem C -  André Ricardo Backes.
 
 ## License
 
