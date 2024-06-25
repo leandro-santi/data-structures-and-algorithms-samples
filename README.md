@@ -1,6 +1,7 @@
 <div align="center">
   <img src="data-structures-and-algorithms.png" width="230px" />
 </div>
+
 <div align="center">
   <img src="https://img.shields.io/github/languages/count/leandro-santi/data-structures-and-algorithms-samples?color=%231E90FF&style=flat-square" alt="languages" />
   <img src="https://img.shields.io/github/license/leandro-santi/data-structures-and-algorithms-samples?color=%231E90FF&style=flat-square" alt="license" />
